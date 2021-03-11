@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        'use strict';
+        const curry = ['お肉', 'にんじん', 'たまねぎ', 'じゃがいも', 'ルー', '水', '油'];
+        // 配列をコンソールに出力します
+        console.log(curry);
+        // 配列の中身のデータ数をコンソールに出力します
+        console.log(curry.length); // 7
+        console.log(curry.length);
+        // 配列の先頭をコンソールに出力します
+        console.log(curry[0]); // お肉
+        // 配列の末尾のデータをコンソールに出力します
+        console.log(curry[curry.length - 1]); // 油
+
+        // 'たまねぎ' を '玉ねぎ' に変更します
+        curry[2] = '玉ねぎ';
+
+        curry.push('お米');
+        curry.pop();
+        curry.unshift('お米');
+        curry.shift();
+
+        for (let i = 0; i < curry.length; i++) {
+            console.log(curry[i]);
+        }
+
+        let text = 'カレーに必要な材料は、';
+        for (let i = 0; i < curry.length; i++) {
+            text += curry[i];
+            // 最後のデータの後には'、'を付けない
+            if (i !== curry.length - 1) {
+                text += '、';
+            }
+        }
+        text += 'です';
+        console.log(text);
+
+
+        // 数値が格納された配列を作成します
+        const numberList = [23, 56, 2, 5, 0, 45, 6];
+
+        // ----------
+        // 例: 配列内にある 数値 0 のインデックス番号を調べたい場合
+        // ----------
+        // index を宣言し -1 で初期化します
+        let index = -1;
+        for (let i = 0; i < numberList.length; i++) {
+            if (numberList[i] === 0) {
+                // 0 が見つかったので index に i を代入し、 break でループ処理を抜けます
+                index = i;
+                break;
+            }
+        }
+        console.log('数値0のindex番号は ' + index + ' です'); // 数値0のindex番号は 4 です
+
+
+
+        // 例: 配列内の 偶数 をコンソールに出力したい場合
+        // ----------
+        for (let i = 0; i < numberList.length; i++) {
+            // 数値を 2で割った余り が 0 であれば、変数に true、そうでなければ false を代入します
+            const isEvenNumber = numberList[i] % 2 === 0;
+            // 偶数でなければ continue でこの後の処理をスキップして次のループに移行します
+            if (!isEvenNumber) {
+                continue;
+            }
+            console.log(numberList[i] + ' は偶数です');
+        }
+
+
+
+
+        // 課題１
+        const ドラえもん = ['ドラえもん', 'のび太', 'しずか', 'スネ夫', 'ジャイアン'];
+        console.log(ドラえもん);
+
+        console.log(ドラえもん[3]);
+
+        ドラえもん[2] = 'スネ夫';
+        ドラえもん[3] = 'しずか';
+        console.log(ドラえもん[3]);
+
+
+
+        let weather = '晴れ';
+
+        const makeWeatherSentense = function (weather) {
+            if (!weather) {
+                weather = '不明';
+            }
+            return '今日の天気は、' + weather + 'です';
+        }
+
+        let sentense = makeWeatherSentense(weather);
+
+        console.log(sentense);
+
+
+        // function viewWeatherSentense(weather) {
+        //     if (!weather) {
+        //         weather = '不明';
+        //     }
+        //     console.log('今日の天気は、' + weather + 'です');
+
+
+        // グローバル変数hello を定義します
+        let hello = 'Hello!';
+
+        function greeting() {
+            // 関数内で グローバル変数hello を呼び出してみます
+            console.log(hello);
+        }
+        greeting(); // Hello
+
+
+
+
+
+        let person = {
+            name: {
+                first: 'のび太',
+                last: '野比'
+            },
+            gender: 'male',
+            country: 'JP',
+            hobby: '寝ること'
+        }
+        console.log(person.name);
+        console.log(person.hobby);
+
+
+
+        // let array=[7,4,3,1];
+        // array.push(8);
+        // console.log(array[array.length -1]);
+
+        for (let i = 0; i < 10; i++) {
+            console.log(i);
+        }
+
+        for (let i = 0; i < 10; i++) {
+            if (i % 2 == 0) {
+                console.log(i);
+            }
+        }
+
+        // let array=['赤','青','黄'];
+        // for(let i =0; i<array.length;i++){
+        //     console.log(array[i]);
+        // }
+
+        // let array = [100, '10', 11];
+        // let str = '';
+        // for (let i = 0;
+        //     i < array.length; i++) {
+        //     str += array[i];
+        // }
+        // console.log(str);
+
+
+        const obj = {
+            name: '桃太郎',
+            job: '冒険者',
+            age: 21,
+            friends: ['猿', '犬', '雉']
+        }
+        // console.log('${obj.name}は${obj.job}です');
+
+        // function say(name){
+        //     return 'Hello ${name}';
+        // }
+        // console.log(say('Taro'));
+
+        const name = 'Momo';
+        function say(name) {
+            return 'Hello ${name}';
+        }
+        console.log(say('Taro'));
+
+
+        let array = [4, 2, 5, 9];
+        function viewArray(val) {
+            if (val || val == 0) {
+                console.log(array[val]);
+            }
+        }
+        viewArray(0);
+
+
+        let x = 0;
+        _viewTruthyVal(x);
+
+        function _viewTruthyVal(val = 1) {
+            if (val)
+                console.log(val);
+        }
+
+        // window をコンソールに表示します
+        console.log(window);
+
+        // 現在開かれている画面のサイズを表示します
+        console.log('画面の横幅は ' + window.innerWidth + 'px です');
+        console.log('画面の縦幅は ' + window.innerHeight + 'px です');
+
+        // 現在開かれているページのURLを表示します
+        console.log(window.location.href); // URL
+        console.log(window.location.port); // ポート番号
+        console.log(window.location.protocol); // http や https など
+        console.log(window.location.pathname); // プロトコルとポート番号、検索パラメータを省いたURL
+        console.log(window.location.search); // 検索パラメータ(?より後の文字列)
+
+
+        // document をコンソールに表示します
+        console.log(document);
+
+        // document 内のリンク(aタグ要素)全てを取得してコンソールに表示します
+        console.log(document.links);
+        for (let i = 0; i < document.links.length; i++) {
+            console.log(document.links[i].href);
+        }
+
+        // headタグ要素 をコンソールに表示します
+        console.log(document.head);
+
+        // titleタグ要素内の文字列 をコンソールに表示します
+        console.log(document.title);
+        // titleタグ要素内の文字列を 変更 します
+        document.title = '変更しました';
+        console.log(document.title);
+
+        // bodyタグ要素 をコンソールに表示します
+        console.log(document.body);
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+    <button onclick="_c();">
+        Click
+    </button>
+    <script>
+        function _c(){
+            console.log('Clicked')
+        }
+    </script>
+
+    <div id="query"></div>
+    <script>
+        let ele=
+        document.getElementById(
+            'query');
+        ele.innerText=
+        `"${クエリ}"の検索結果`;
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+
+    <p class="text-red">ありがとー</p>
+
+    <script>
+        'use strict';
+        console.log(1234);
+
+        let x = 5;
+        let y = 567;
+        console.log(x * y)
+
+        x = 4
+        y = 3
+        console.log(x / y)
+
+        const yen = '￥';
+        const dol = '$';
+
+        console.log(yen + 4)
+
+        // console.log("    <p class="text - red">ありがとー</p>")
+        console.log(' xには' + x + 'が入っています')
+        console.log('xには ${x}が入っています')
+
+        console.log(7777 + 1)
+        console.log('77777' + '1')
+
+        let i = 0;
+        i = i + 1;
+        console.log(++i)
+
+        console.log(true);
+        console.log(false);
+        let resulut = true;
+
+        if (resulut) {
+            console.log('真です。');
+        } else {
+            console.log('偽です。');
+        }
+
+
+        let r1 = true;
+        let r2 = false;
+
+        if (r1 && r2) {
+            console.log('真です。');
+        } else {
+            console.log('偽です。')
+        }
+
+        if (100 === '100')
+            console.log('真です');
+        else {
+            console.log('偽です')
+        }
+
+        const age = 22;
+        console.log(age + 4);
+
+        let amount = 3900;
+        let inputValue = '20';
+        console.log(amount + Number(inputValue));
+
+        let count = 1;
+        // count +=20;
+        console.log(count++);
+
+
+        console.log("Aくんは\"こんにちは\"と言った")
+
+
+        let num = "567";
+        const result = 100 + ++num;
+        console.log(result);
+
+
+        let val = 100;
+        if (val >= 100) {
+            val += 50;
+            if (val > 130) {
+                console.log(val)
+            }
+        }
+
+
+        // let val = undefined;
+        // let num = 0;
+        // let greet = 'Hello';
+        // console.log(val || num || greet);
+
+
+
+
+
+
+        let animal = 'dog', voice;
+        switch (animal) {
+            case 'dog': voice = 'わん';
+                break;
+            case 'cat': voice = 'にゃん';
+                break;
+        }
+        console.log(voice);
+
+        console.log("uemoto")
+
+
+        let Age = 21;
+        console.log('私の年齢は' + Age + '歳です')
+
+        console.log(60 * 60 * 24 + 60 * 60 * 12)
+
+        let I = 0;
+        I = I + 1;
+        console.log(+I)
+    </script>
+</body>
+
+</html>

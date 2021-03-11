@@ -1,0 +1,28 @@
+header{
+    height: 50px;
+    width: 100%;
+    background-color: aquamarine;
+}
+
+body{
+    margin: 0;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+}
+.flex a{
+    text-decoration: none;
+}
+h1{
+    margin: 0;
+    font-size: 1.6rem;
+    padding: 10px;
+}
+
+li{
+    padding: 10px;
+}
